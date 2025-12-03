@@ -1,73 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <style>
-        .card {
-            border: 2px solid #ccc;
-            padding: 20px;
-            width: 200px;
-            text-align: center;
-            border-radius: 10px;
-        }
-
-        /* Team Styles */
-        .team-red {
-            border-color: red;
-            background-color: #ffe6e6;
-            color: darkred;
-        }
-
-        .team-blue {
-            border-color: blue;
-            background-color: #e6e6ff;
-            color: darkblue;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
 <body>
-    <h2>Profile Creator</h2>
-
-    <!-- Controls -->
-    <input type="text" id="nameInput" placeholder="Enter Name">
-    <br><br>
-    <button onclick="setTeam('red')">🔴 Join Team Red</button>
-    <button onclick="setTeam('blue')">🔵 Join Team Blue</button>
-
-    <hr>
-
-    <!-- The Display Card -->
-    <div id="profileCard" class="card">
-        <h2 id="displayName">Guest</h2>
-        <p>Likes: <span id="likeCount">0</span></p>
-        <button onclick="addLike()">👍 Like</button>
-    </div>
-
-    <script>
-        let likes = 0; // State variable
-
-        function setTeam(color) {
-            // Update Name
-            let name = document.getElementById("nameInput").value;
-            let card = document.getElementById("profileCard");
-            let nameText = document.getElementById("displayName");
-
-            if (name !== "") {
-                nameText.innerText = name;
-            }
-
-            // Reset classes then add the specific one
-            card.className = "card"; // Removes old team classes
-            card.classList.add("team-" + color);
-        }
-
-        function addLike() {
-            // Increment state
-            likes = likes + 1;
-
-            // Update UI
-            document.getElementById("likeCount").innerText = likes;
-        }
-    </script>
+    
 </body>
 </html>
